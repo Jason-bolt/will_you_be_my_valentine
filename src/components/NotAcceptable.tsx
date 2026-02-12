@@ -9,14 +9,12 @@ const NotAcceptable = ({
   setUnacceptableResponse: (showModal: boolean) => void;
 }) => {
   useEffect(() => {
-    const setModal = () => {
-      setTimeout(() => {
-        setUnacceptableResponse(false);
-      }, 1000 * 2);
-    };
+    const id = setTimeout(() => {
+      setUnacceptableResponse(false);
+    }, 1000 * 2);
 
-    return () => setModal();
-  }, []);
+    return () => clearTimeout(id);
+  }, [setUnacceptableResponse]);
 
   useGSAP(
     () => {
