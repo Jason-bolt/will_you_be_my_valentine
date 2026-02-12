@@ -34,7 +34,7 @@ const Home = () => {
     const secret = constants.SECRET; // WARNING: Not for sensitive use
 
     const jwt = sign(data, secret);
-    setMessageLink(`${constants.DOMAIN}/${jwt}`);
+    setMessageLink(`${constants.DOMAIN}/valentine/${jwt}`);
     setIsLoading(false);
   };
 
