@@ -7,6 +7,7 @@ import { FaCheck, FaHeart } from "react-icons/fa";
 import sign from "jwt-encode";
 import { AiOutlineLoading } from "react-icons/ai";
 import { BiCopyAlt } from "react-icons/bi";
+import constants from "../utils/constants";
 
 const Home = () => {
   const [name, setName] = useState("");
@@ -30,10 +31,10 @@ const Home = () => {
       message,
       iat: Date.now() / 1000,
     };
-    const secret = "your-client-side-secret"; // WARNING: Not for sensitive use
+    const secret = constants.SECRET; // WARNING: Not for sensitive use
 
     const jwt = sign(data, secret);
-    setMessageLink(`http://localhost:5173/valentine/${jwt}`);
+    setMessageLink(`${constants.DOMAIN}/${jwt}`);
     setIsLoading(false);
   };
 
