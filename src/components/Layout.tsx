@@ -2,7 +2,7 @@ import { CiInstagram, CiLinkedin, CiYoutube } from "react-icons/ci";
 import { RiTiktokFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const Layout = () => {
   return (
