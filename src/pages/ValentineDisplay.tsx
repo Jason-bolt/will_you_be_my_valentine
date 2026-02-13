@@ -24,7 +24,7 @@ const ValentineDisplay = () => {
   };
 
   return (
-    <section className="min-h-screen w-full bg-radial-[at_25%_25%] from-red-700 to-red-900 to-75% text-white">
+    <section className="min-h-screen">
       {showUnacceptableResponse && (
         <NotAcceptable setUnacceptableResponse={setUnacceptableResponse} />
       )}

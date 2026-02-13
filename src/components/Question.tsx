@@ -82,7 +82,7 @@ const Question = ({
             setAreButtonsActive(true);
           },
         });
-        
+
         gsap.from("#questionIllustration", {
           y: 40,
           opacity: 0,
@@ -98,23 +98,27 @@ const Question = ({
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center px-4">
         <AiOutlineLoading className="size-6 animate-spin text-white" />
       </div>
     );
   }
 
   if (error) {
-    return <div className="text-white">Error: {error}. Redirecting...</div>;
+    return (
+      <div className="flex w-full items-center justify-center px-4">
+        <div className="my-48 text-3xl font-bold text-white">
+          Link has been tampered with, sending you home...
+        </div>
+      </div>
+    );
   }
-
-  console.log(areButtonsActive);
 
   return (
     <>
       <div
         id="question"
-        className="relative container mx-auto flex flex-col items-center justify-center gap-6 px-4 pt-28 pb-10 md:py-28"
+        className="md:pt- relative container mx-auto flex flex-col items-center justify-center gap-6 px-4 pt-28 pb-10 md:py-28"
       >
         <GiRose className="size-16 text-white" />
         <h1 className="rounded-md border border-dashed border-white p-5 text-center text-2xl font-bold">
@@ -137,8 +141,15 @@ const Question = ({
           </button>
         </div>
       </div>
-      <div id="questionIllustration" className="flex w-full items-center justify-center">
-        <img src={DeclarationOfLove} className="h-96 w-full" alt="Declaration of love" />
+      <div
+        id="questionIllustration"
+        className="flex w-full items-center justify-center"
+      >
+        <img
+          src={DeclarationOfLove}
+          className="h-96 w-full"
+          alt="Declaration of love"
+        />
       </div>
     </>
   );

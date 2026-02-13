@@ -89,7 +89,7 @@ const Home = () => {
   });
 
   return (
-    <section className="min-h-screen w-full bg-radial-[at_25%_25%] from-red-700 to-red-900 to-75% text-white">
+    <section>
       <div className="relative container mx-auto flex flex-col items-center justify-center gap-4 px-4 py-20">
         <h1 className="flex items-center justify-center gap-2 text-center text-4xl font-bold">
           Ask the Question <FaHeart className="size-7 text-white" />
